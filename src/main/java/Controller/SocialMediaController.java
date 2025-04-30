@@ -142,6 +142,7 @@ public class SocialMediaController {
             context.status(400);
             return;
         }
+        
         Message updateMessageReturned = messageService.updMessage(existedMessage, newText);
         context.status(200).json(updateMessageReturned);
     }
